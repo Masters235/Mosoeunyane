@@ -1,0 +1,95 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paradise Food Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ff6f00;
+      padding: 20px;
+      color: white;
+    }
+
+    h1, h2 {
+      margin: 20px 0;
+    }
+
+    .menu-items img, .car-options img {
+      width: 200px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .payment button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #00c853;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paradise Food Hub</h1>
+  </header>
+
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <img src="pizza.jpg" alt="Pizza" onclick="orderItem('Pizza')">
+      <img src="burger.jpg" alt="Burger" onclick="orderItem('Burger')">
+      <img src="chicken.jpg" alt="Chicken" onclick="orderItem('Chicken')">
+    </div>
+  </section>
+
+  <section class="delivery">
+    <h2>Choose Delivery Car</h2>
+    <div class="car-options">
+      <img src="car.jpg" alt="Delivery Car" onclick="selectCar()">
+    </div>
+  </section>
+
+  <section class="payment">
+    <h2>Payment Options</h2>
+    <button onclick="payMpesa()">Pay with M-Pesa</button>
+    <button onclick="payEcocash()">Pay with EcoCash</button>
+  </section>
+
+  <script>
+    function orderItem(item) {
+      alert("You selected: " + item);
+    }
+
+    function selectCar() {
+      alert("Delivery car selected!");
+    }
+
+    function payMpesa() {
+      alert("Redirecting to M-Pesa payment...");
+      // Insert M-Pesa API integration logic here
+    }
+
+    function payEcocash() {
+      alert("Redirecting to EcoCash payment...");
+      // Insert EcoCash API integration logic here
+    }
+  </script>
+</body>
+</html>
